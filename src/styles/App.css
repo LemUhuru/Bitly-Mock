@@ -1,28 +1,182 @@
-.App {
+
+.presentation {
+  background: url('../assets/img/background-image.png');
+  background-repeat: none;
+  background-position: center top;
+  background-size: cover;
+}
+
+.header-nav {
+  margin-left: 12px;
+  padding: 0;
+}
+
+.header-nav img {
+  width: 52px;
+}
+
+.header-nav {
+  padding-top: 10px;
+}
+
+.header-nav li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.banner {
   text-align: center;
+  margin-top: 50px;
+  color: #fff;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.banner h1 {
+  font-size: 28px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.banner p {
+  font-size: 14px;
+  opacity: 0.6;
 }
 
-.App-title {
-  font-size: 1.5em;
+.shorten-bar-form {
+  margin: 0 auto;
+  font-size: 12px;
+  margin-top: 30px;
 }
 
-.App-intro {
-  font-size: large;
+.shorten-bar {
+  border-radius: 1px;
+  border: 2px solid #fff;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  height: 40px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.shorten-bar:focus {
+  outline: 2px solid #ee6123;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+::placeholder {
+  opacity: 0.6;
+}
+
+.shorten-btn {
+  padding: 5px 15px;
+  background: #ee6123;
+  border: 2px solid #ee6123;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  font-weight: 300;
+}
+
+.shorten-btn:hover {
+  background: #e46128;
+}
+
+.bitlink-list {
+  background: #fff;
+  padding: 15px;
+  border-radius: 2px;
+  margin: 0 auto;
+  border: 1px solid #f5f5f5;
+  box-shadow: 1px 2px #f5f5f5;
+}
+
+.bitlink-list li {
+  list-style-type: none;
+  border-bottom: 1px solid #9b9b9b;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+.bitLink-item__header {
+  clear: both;
+}
+
+.bitlink-item__footer {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.bitlink-item__title {
+  margin: 0;
+}
+
+.bitlink-item__title a {
+  color: #444444 !important;
+}
+
+.bitlink-item__long-url a {
+  color: #9b9b9b !important;
+}
+
+.bitlink-item__short-url {
+  color: #ee6123 !important;
+  cursor: pointer;
+}
+
+.bitlink-item__short-url:active {
+  color: #ca6337 !important;
+}
+
+.bitlink-item__short-url:hover {
+  text-decoration: none;
+}
+
+.bitlink-item__count {
+  position: absolute;
+  font-size: 16px;
+  right: 0;
+}
+
+.bitlink-item__click-icon {
+  width: 20px;
+  margin-left: 5px;
+}
+
+/* Above Mobile - Simple Tablet, Desktop Styles */
+
+@media(min-width: 480px) {
+  .header-nav {
+    margin-left: 200px;
+  }
+
+  .header-nav li {
+    margin-right: 20px;
+  }
+
+  .header-nav img {
+    width: 72px;
+  }
+
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .shorten-bar-form {
+    width: 450px;
+  }
+
+  .shorten-bar {
+    width: 80%;
+  }
+
+  .bitlink-list {
+    width: 450px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
 }

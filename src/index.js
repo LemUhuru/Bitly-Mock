@@ -7,9 +7,10 @@ import configStore from './config/configStore'
 import App from './components/App'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles/index.css'
+import './BitlySDK'
 
 const store = configStore()
-
+console.log('store', store.getState())
 ReactDOM.render(
   <Router>
     <Provider store={store}>
