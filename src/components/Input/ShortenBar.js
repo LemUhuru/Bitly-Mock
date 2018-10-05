@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import validUrl from 'valid-url'
+import { link } from 'fs';
 
 class ShortenBar extends Component {
   constructor(props) {
@@ -23,6 +24,9 @@ class ShortenBar extends Component {
     } else {
       this.setState({ isError: true })
     }
+
+    // clear text input
+    this.setState({linkQuery: ''})
   }
 
   handleInputChange = event => {
@@ -32,7 +36,7 @@ class ShortenBar extends Component {
   }
 
   render() {
-    const { isError } = this.state
+    const { isError, linkQuery } = this.state
 
     return (
       <form onSubmit={this.handleFormSubmit} className="shorten-bar-form">
@@ -40,6 +44,7 @@ class ShortenBar extends Component {
           onChange={this.handleInputChange}
           className="shorten-bar"
           type="text"
+          value={linkQuery}
           placeholder="Paste a link to shorten it"
         />
         <input className="shorten-btn" type="submit" value="SHORTEN"/>
